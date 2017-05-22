@@ -1,1 +1,13 @@
-<h1>EDIT</h1>
+<h1>Edição de tipo de usuário</h1>
+<p>Os tipos servem para definir os sub-grupos de usuarios, como:</p>
+<%= form_for @tipo do |t| %>
+	<p>Grupo: <%= t.select :grupo_id, Grupo.all.collect { |grupo| [grupo.nome, grupo.id] }, :include_blank=>"Selecione" %></p>
+
+	<p><%= t.label :nome %><p>
+	<p><%= t.text_field :nome %><p>
+	
+	<p><%= t.label :descricao %></p>
+	<p><%= t.text_area :descricao %></p>
+	
+	<p><%= t.submit "Atualizar tipo" %></p>
+<% end %>

@@ -1,1 +1,12 @@
-<h1>INDEX</h1>
+<h1>Lista de usuário já cadastrados</h1>
+
+<hr />
+<% @usuarios.each do |usr| %>
+	<p>Grupo: <%= usr.tipo.grupo.nome %></p>
+	<p>Tipo: <%= usr.tipo.nome %></p>
+	<p>Nome: <%= usr.nome %></p>
+	<p>E-mail: <%= usr.email %></p>
+	<hr />
+<% end %>
+
+<p><%= link_to "Criar", new_usuario_path %></p>

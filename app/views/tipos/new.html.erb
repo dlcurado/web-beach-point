@@ -1,1 +1,17 @@
-<h1>NEW</h1>
+<h1>Criação de tipo de usuário</h1>
+<p>Os tipos servem para definir os sub-grupos de usuarios, como:</p>
+<ul>
+	<% @tipos.each do |tipo| %>
+		<li><%= tipo.nome%></li>
+	<% end %>
+</ul>
+<%= form_for @tipo do |t| %>
+	<p><%= t.label :nome %><p>
+	<p><%= t.text_field :nome %><p>
+	
+	<p><%= t.label :descricao %></p>
+	<p><%= t.text_area :descricao %></p>
+	
+	<%= t.select :grupo_id, Grupo.all.collect { |grupo| [grupo.nome, grupo.id] }, :include_blank=>"Selecione" %>
+	<p><%= t.submit "Criar tipo" %></p>
+<% end %>

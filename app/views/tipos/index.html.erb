@@ -1,1 +1,16 @@
-<h1>INDEX</h1>
+<h1>Lista de tipos de pessoas</h1>
+<p>As pessoas que vão à praia são dos mais diversos tipo, segmentados dentro dos <%= @grupos.count %> grupos cadastrados:<br />
+	<ul>
+	<% @grupos.each do |grupo| %>
+		<li><%= grupo.nome %></li>
+	<% end %>
+	</ul>
+</p>
+<p>Abaixo segue a lista atual dos tipos de pessoas do sistema:</p>
+
+<% @tipos.each do |tipo| %>
+	<p><%= link_to tipo.nome, edit_tipo_path(:id => tipo.id) %></p>
+	<small><b><%= tipo.grupo.nome %>:</b><%= tipo.descricao %></small>
+<% end%>
+
+<p><%= link_to "Criar", new_tipo_path %></p>
