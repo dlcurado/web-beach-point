@@ -1,0 +1,10 @@
+<h1>Lista de grupos</h1>
+<p>Os grupos servem para definir os macros grupos de usuários, como vendedores e clientes.</p>
+<p>Já os tipos podem ser entendidos como sub-grupos, servindo para diferenciar perfis como vendedores ambulantes dos vendedores fixos (barraqueiros), moradores locais de turistas, etc.</p>
+
+<% @grupos.each do |grupo| %>
+	<p><%= link_to grupo.nome, edit_grupo_path(:id => grupo.id) %></p>
+	<small><%= grupo.descricao %></small>
+<% end%>
+
+<p><%= link_to "Criar", new_grupo_path %></p>

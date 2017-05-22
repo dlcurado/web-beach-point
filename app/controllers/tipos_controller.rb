@@ -1,6 +1,10 @@
-class TiposUsuarioController < ApplicationController
+class TiposController < ApplicationController
 	def index
 	end
+	
+	def show
+	end
+	
 	
 	def new
 	end
@@ -8,15 +12,12 @@ class TiposUsuarioController < ApplicationController
 	def create
 	end
 	
-	def show
+	def edit
 	end
 	
 	def update
 	end
 	
 	def destroy
-	end
-	
-	def edit
 	end
 end

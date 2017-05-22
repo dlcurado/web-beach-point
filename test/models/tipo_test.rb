@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TiposUsuarioControllerTest < ActionDispatch::IntegrationTest
+class TipoTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

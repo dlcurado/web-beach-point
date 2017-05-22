@@ -1,0 +1,13 @@
+<h1>Criação de grupos</h1>
+<p>Os grupos servem para definir os macros grupos de usuários, como vendedores e clientes.</p>
+
+<%= form_for @grupo do |g| %>
+	<p><%= g.label :nome %><p>
+	<p><%= g.text_field :nome %><p>
+	
+	<p><%= g.label :descricao %></p>
+	<p><%= g.text_area :descricao %></p>
+	
+	<!-- g.select :grupoId, Grupo.all.collect {|x| [x.nome, x.id]}, {:include_blank, "Selecione"} -->
+	<p><%= g.submit "Criar grupo" %></p>
+<% end %>
