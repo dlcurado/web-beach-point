@@ -9,6 +9,20 @@
   </head>
 
   <body>
+  
+	<div>
+		<ul>
+			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "Sobre nós", sobre_path %></li>
+			<% if true %>
+				<li><%= link_to "Login", login_path %></li>
+			<% else %>
+				<li><%= link_to "Perfil", perfil_path %></li>
+			<% end %>
+			<li><%= link_to "Ajuda", ajuda_path %></li>
+		</ul>
+	</div>
+	
   	<% flash.each do |key, value| %>
 		<p><%= value %></p>
 	<% end %>
