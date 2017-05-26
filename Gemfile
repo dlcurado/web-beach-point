@@ -12,7 +12,8 @@ gem 'rails', '~> 5.0.3'
 # NOT USED gem'sqlite3'
 
 # Gem for PostgreSql Database
-gem 'pg', '~> 0.20'
+gem 'pg'
+# gem 'aerfhaefjafhaj'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
