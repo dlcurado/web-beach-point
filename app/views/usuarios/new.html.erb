@@ -1,17 +1,29 @@
-<h1>Registre-se</h1>
-<p>Para utilizar o Beach Point você precisará de um cadastro simples para que possamos adequar o aplicativo para o seu perfil e oferecer o melhor da praia.</p>
+<%= render "layouts/simple_menu" %>
 
-<%= form_for @usuario do |usr| %>
-	<p>Grupo: <%= usr.select :tipo_id, Tipo.all.collect { |tipo| [tipo.nome, tipo.id] }, :include_blank=>"Selecione" %></p>
+<div class="wrapper row1">
+	<header id="header" class="hoc clear"> 
+		<!-- ################################################################################################ -->
+		<div id="logo" class="fl_left">
+		  <h1>Registre-se</h1>
+		  <p>Para utilizar o Beach Point você precisará de um cadastro simples para que possamos adequar o aplicativo para o seu perfil e oferecer o melhor da praia.</p>
+		</div>
+		<!-- ################################################################################################ -->
+	</header>
+	
+	<div class="hoc clear">
+		<%= form_for @usuario do |usr| %>
+			<p>Grupo: <%= usr.select :tipo_id, Tipo.all.collect { |tipo| [tipo.nome, tipo.id] }, :include_blank=>"Selecione" %></p>
 
-	<p><%= usr.label :nome %><p>
-	<p><%= usr.text_field :nome %><p>
-	
-	<p><%= usr.label :email %></p>
-	<p><%= usr.text_field :email %></p>
-	
-	<p><%= usr.label :senha %></p>
-	<p><%= usr.text_field :senha %></p>
-	
-	<p><%= usr.submit "Registrar" %></p>
-<% end %>
+			<p><%= usr.label :nome %><p>
+			<p><%= usr.text_field :nome %><p>
+			
+			<p><%= usr.label :email %></p>
+			<p><%= usr.text_field :email %></p>
+			
+			<p><%= usr.label :senha %></p>
+			<p><%= usr.text_field :senha %></p>
+			
+			<p><%= usr.submit "Registrar" %></p>
+		<% end %>
+	</div>
+</div>

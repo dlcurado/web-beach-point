@@ -1,2 +1,247 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render "layouts/menu" %>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><%= link_to "Beach Point", root_path %></h1>
+    </div>
+    <div id="quickinfo" class="fl_right">
+      <ul class="nospace inline">
+        <li><strong>Contato:</strong><br>
+          +55 (98) 99100-3550</li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url(<%= asset_path 'parallax/praia01.jpg' %>);">
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article class="introtxt">
+      <h2 class="heading">Por uma vida mais f&aacute;cil!</h2>
+      <p>Encontre o melhor lugar, promo&ccedil;&otilde;es, comidas e amigos.</p>
+      <footer>
+        <ul class="nospace inline pushright">
+          <li><%= link_to "Cadastre-se", usuarios_path, :class=>"btn" %></li>
+          <li><%= link_to "Login", login_path, :class=>"btn" %></li>
+        </ul>
+      </footer>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3" id="oquefaz">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-50">
+      <p class="nospace"><a href="#">J&aacute; imaginou ter tudo na palma da m&atilde;o?</a></p>
+      <h2 class="heading font-x3">Solicite o que precisa de onde estiver.</h2>
+      <p>Guarda-sol, vendedores ambulantes, comidas, bebidas e todos os produtos da praia em um s&oacute; clique.</p>
+    </div>
+    <div class="group center">
+      <article class="one_quarter first"><i class="icon fa fa-map"></i>
+        <h4 class="font-x1 uppercase"><a href="#">Localize</a></h4>
+        <p>Encontre o local ideal para o seu dia. Saiba sobre promo&ccedil;&otilde;es, card&aacute;pios, eventos e como chegar l&aacute;.</p>
+      </article>
+      <article class="one_quarter"><i class="icon fa fa-cutlery"></i>
+        <h4 class="font-x1 uppercase"><a href="#">Solicite</a></h4>
+        <p>N&atilde;o espere mais pela sua comida favorita. Saibam onde os vendedores ambulantes est&atilde;o e chame-os at&eacute; o seu local.</p>
+      </article>
+      <article class="one_quarter"><i class="icon fa fa-glass"></i>
+        <h4 class="font-x1 uppercase"><a href="#">Desfrute</a></h4>
+        <p>Tenha todo o conforto de onde est&aacute;, acessando o card&aacute;pio do local, pedindo e controlando sua conta.</p>
+      </article>
+      <article class="one_quarter"><i class="icon fa fa-users"></i>
+        <h4 class="font-x1 uppercase"><a href="#">Reuna</a></h4>
+        <p>Convide os amigos e indique aonde você est&aacute;. O conforto &eacute; por nossa conta.</p>
+      </article>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper">
+  <div class="split clear light" style="background-image:url(<%= asset_path 'parallax/praia02.jpg' %>);">
+    <section class="box center"> 
+      <!-- ################################################################################################ -->
+      <div class="center btmspace-50">
+        <p class="nospace"><a href="#">Est&aacute; na d&uacute;vida?</a></p>
+        <h2 class="heading font-x3">Veja que j&aacute; est&aacute; conosco!</h2>
+        <p>Caso seu local/vendedor preferido n&atilde;o esteja aqui, nos avise que vamos procur&aacute;-lo.</p>
+      </div>
+      <figure id="logos">
+        <ul class="nospace group">
+          <li><a href="#"><img src=<%= asset_path 'demo/logo.png' %> alt=""></a></li>
+          <li><a href="#"><img src=<%= asset_path 'demo/logo.png' %> alt=""></a></li>
+          <li><a href="#"><img src=<%= asset_path 'demo/logo.png' %> alt=""></a></li>
+          <li><a href="#"><img src=<%= asset_path 'demo/logo.png' %> alt=""></a></li>
+          <li><a href="#"><img src=<%= asset_path 'demo/logo.png' %> alt=""></a></li>
+          <li><a href="#"><img src=<%= asset_path 'demo/logo.png' %> alt=""></a></li>
+        </ul>
+        <figcaption class="hidden"><a href="#">More &raquo;</a></figcaption>
+      </figure>
+      <!-- ################################################################################################ -->
+    </section>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url(<%= asset_path 'parallax/praia03.jpg' %>);">
+  <div class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-50">
+      <p class="nospace"><a href="#">Nossos usu&aacute;rios est&atilde;o gostando</a></p>
+      <h2 class="heading font-x3">Feedbacks</h2>
+      <p>Leia o que as pessoas est&atilde;o achando pelas praias a fora:</p>
+    </div>
+    <ul id="testimonials" class="nospace group">
+      <li class="one_third">
+        <figure class="clear"><img src="images/feedbacks/60x60_daniel.png" alt="">
+          <figcaption><strong>Daniel L. Curado</strong><br>
+            <em>Turista, Campinas/SP</em></figcaption>
+        </figure>
+        <blockquote><%= @teste %></blockquote>
+      </li>
+      <!--li class="one_third">
+        <figure class="clear"><img src="images/feedbacks/60x60.png" alt="">
+          <figcaption><strong>B.Doe</strong><br>
+            <em>Position, Company Name</em></figcaption>
+        </figure>
+        <blockquote>Nunc sed tristique dolor mauris semper massa ac velit auctor nec blandit turpis hendrerit duis sit amet ornare odio non consequat erat donec magna lorem porttitor quis volutpat nec faucibus ac leo phasellus eleifend nulla nec viverra.</blockquote>
+      </li>
+      <li class="one_third">
+        <figure class="clear"><img src="images/feedbacks/60x60.png" alt="">
+          <figcaption><strong>C.Doe</strong><br>
+            <em>Position, Company Name</em></figcaption>
+        </figure>
+        <blockquote>Etiam mollis nunc sed orci suscipit nec dapibus velit euismod proin sit amet semper nisl cras sed magna massa ut feugiat leo nec odio vulputate gravida suspendisse faucibus lacus ligula vitae feugiat elit venenatis ut phasellus.</blockquote>
+      </li-->
+    </ul>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <div class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="group">
+      <section class="one_half first">
+        <h6 class="heading font-x3 btmspace-50">Donwload</h6>
+        <ul class="nospace">
+          <!--li class="btmspace-30">
+            <article>
+              <h4 class="nospace"><a href="#">Baixe nosso App e desfrute do melhor que as praias tem à oferecer</a></h4>
+              <time class="font-xs" datetime="2045-04-06">Equipe Beach Point</time>
+            </article>
+          </li-->
+          <li class="btmspace-30">
+            <article>
+              <h4 class="nospace"><a href="#">Android</a></h4>
+              <time class="font-xs" datetime="2045-04-05">Baixar</time>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h4 class="nospace"><a href="#">iOS</a></h4>
+              <time class="font-xs" datetime="2045-04-04">Baixar</time>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <section class="one_half">
+        <h6 class="heading font-x3 btmspace-50">Contato</h6>
+        <p>Conte-nos sua experiência ou tire suas d&uacute;vidas.</p>
+        <p class="btmspace-30">Teremos o prazer em receber o seu contato.</p>
+        <form id="newsletter" method="post" action="#">
+          <fieldset>
+            <input class="btmspace-15" type="text" value="" placeholder="Nome">
+            <input class="btmspace-15" type="text" value="" placeholder="Email">
+			<input class="btmspace-15" type="textfield" value="" placeholder="Conte&uacute;do">
+            <button type="submit" value="submit">Enviar</button>
+          </fieldset>
+        </form>
+      </section>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h6 class="title">Beach Point</h6>
+      <p>A Beach Point &eacute; uma empresa .....</p>
+      <p>Morbi in dapibus augue nulla facilisi donec posuere dolor in urna hendrerit malesuada donec lectus elit feugiat.</p>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Contatos</h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          N&atilde;o temos endere&ccedil;o f&iacute;sico pois estamos em todos os lugares do mundo
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +00 (123) 456 7890<br>
+          +00 (123) 456 7890</li>
+        <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
+        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Vivamus a diam</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Nunc habitant tristique</a></li>
+        <li><a href="#">Senectus netu malesuada</a></li>
+        <li><a href="#">Fames turpis egestas in</a></li>
+        <li><a href="#">Cursus vulputate ultricies</a></li>
+        <li><a href="#">Aenean lectus ultricies</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Nec sem varius</h6>
+      <ul class="nospace linklist">
+        <li>
+          <article>
+            <h2 class="nospace font-x1"><a href="#">At lacus scelerisque</a></h2>
+            <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+            <p class="nospace">Feugiat massa suspendisse ut finibus odio nam sit amet&hellip;</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h2 class="nospace font-x1"><a href="#">Nullam viverra vel</a></h2>
+            <time class="font-xs block btmspace-10" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+            <p class="nospace">Sapien eu malesuada tincidunt tristique ultricies rhoncus&hellip;</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
