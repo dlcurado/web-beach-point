@@ -5,9 +5,9 @@ default: &default
   encoding: unicode
   pool: 5
   # Porta para o Mac
-  # port: 5433
+  port: 5433
   # Porta para o Windows (TODO: Descobrir como eliminar esse GAP)
-  port: 5432
+  # port: 5432
   
 
 development:
